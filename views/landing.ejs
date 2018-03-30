@@ -1,0 +1,55 @@
+<%include partials/header%>
+
+<h1>Find the perfect rap lyric for your Instagram caption</h1>
+
+<div>
+	<form action="/" method="GET">
+		<div id="category-buttons">
+			<label for="categoryAll">All</label>
+			<input type="radio" name="category" id="categoryAll" value="All">
+			<label for="categoryBae">Bae</label>
+			<input type="radio" name="category" id="categoryBae" value="Bae">
+			<label for="categoryFeels">Feels</label>
+			<input type="radio" name="category" id="categoryFeels" value="Feels">
+			<label for="categoryLit">Lit</label>
+			<input type="radio" name="category" id="categoryLit" value="Lit">
+			<label for="categorySavage">Savage</label>
+			<input type="radio" name="category" id="categorySavage" value="Savage">
+			<label for="categorySquad">Squad</label>
+			<input type="radio" name="category" id="categorySquad" value="Squad">
+		</div>
+		<button type="submit" id="generate-button">Generate</button>
+	</form>
+</div>
+
+<script>
+	if("<%=caption.lyric%>" != ""){
+		var category = "category" + "<%=caption.category%>";
+		console.log(category);
+		document.getElementById(category).checked = true;
+	} else {
+		document.getElementById("categoryAll").checked = true;
+	}
+</script>
+
+<div>
+	<h3 id="caption-lyric"><%=caption.lyric%></h3>
+	<p id="caption-author"><%=caption.author%></p>
+	<p id="caption-song"><%=caption.song%></p>
+	<p id="caption-album"><%=caption.album%></p>
+	<p id="caption-category"><%=caption.category%></p>
+</div> 
+
+<div>
+	<h3>Have a lyric you want to submit?</h3>
+	<form action="/" method="POST">
+		<input type="text" name="lyric" placeholder="Lyric">
+		<input type="text" name="author" placeholder="Author">
+		<input type="text" name="song" placeholder="Song">
+		<input type="text" name="album" placeholder="Album">
+		<input type="text" name="category" placeholder="Category">
+		<input type="submit">
+	</form>
+</div>
+
+<%include partials/footer%>
