@@ -6,7 +6,7 @@ function backgroundFunction(author = 'none') {
 	if (author === 'Drake')
 		newBgImg = 'https://media4.giphy.com/media/xTiTnxatmQVapUTMDC/giphy.gif';
 	else if (author === 'Kanye West')
-		newBgImg = 'https://media.giphy.com/media/WgZ0ptLocPiq4/giphy.gif';
+		newBgImg = 'https://media.giphy.com/media/10mi1quOfIzYAg/giphy.gif';
 	else if (author === 'Chris Brown')
 		newBgImg = 'https://media.giphy.com/media/S2k94AE9N2Dza/giphy.gif';
 	else if (author === 'Jay-Z')
@@ -14,7 +14,7 @@ function backgroundFunction(author = 'none') {
 	else if (author === 'Post Malone')
 		newBgImg = 'https://media.giphy.com/media/l1KulDCUYbZJLbrIQ/giphy.gif';	
 	else
-		newBgImg = 'https://media.giphy.com/media/l0MYz6wr2YZQ1fjuo/giphy.gif';
+		newBgImg = 'https://media.giphy.com/media/13r056zt9Yb1wQ/giphy.gif';
 
     document.getElementById("myImg").src = newBgImg;
 }
