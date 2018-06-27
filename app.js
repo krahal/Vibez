@@ -6,7 +6,7 @@ var bodyParser 	= require("body-parser");
 var Caption    	= require("./models/caption");
 
 // Require routes
-var indexRoutes = require("./routes/index");
+var indexRoutes = require("./controllers/index");
 
 mongoose.connect("mongodb://localhost/rap_captions");
 mongoose.Promise = global.Promise;

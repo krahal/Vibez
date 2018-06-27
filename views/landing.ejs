@@ -1,55 +1,86 @@
 <%include partials/header%>
 
-<h1>Find the perfect rap lyric for your Instagram caption</h1>
+	<div class="page-wrap container">
+		<div id="title-box">
+			<h1>The best rap lyrics for your Instagram Captions</h1>
+			<h2>What vibe of rap lyric are you looking for?</h2>
 
-<div>
-	<form action="/" method="GET">
-		<div id="category-buttons">
-			<label for="categoryAll">All</label>
-			<input type="radio" name="category" id="categoryAll" value="All">
-			<label for="categoryBae">Bae</label>
-			<input type="radio" name="category" id="categoryBae" value="Bae">
-			<label for="categoryFeels">Feels</label>
-			<input type="radio" name="category" id="categoryFeels" value="Feels">
-			<label for="categoryLit">Lit</label>
-			<input type="radio" name="category" id="categoryLit" value="Lit">
-			<label for="categorySavage">Savage</label>
-			<input type="radio" name="category" id="categorySavage" value="Savage">
-			<label for="categorySquad">Squad</label>
-			<input type="radio" name="category" id="categorySquad" value="Squad">
+			<form action="/" method="GET">
+				<div id="category-buttons">
+					<input type="radio" name="category" id="categoryAll" value="All" checked="">
+					<label for="categoryAll">All</label>
+					<input type="radio" name="category" id="categoryBae" value="Bae">
+					<label for="categoryBae">Bae ❤️</label>
+					<input type="radio" name="category" id="categoryFeels" value="Feels">
+					<label for="categoryFeels">Feels 😢</label>
+					<input type="radio" name="category" id="categoryLit" value="Lit">
+					<label for="categoryLit">Lit 🔥</label>
+					<input type="radio" name="category" id="categorySavage" value="Savage">
+					<label for="categorySavage">Savage 😈</label>
+					<input type="radio" name="category" id="categorySquad" value="Squad">
+					<label for="categorySquad">Squad 👨‍👨‍👦‍👦</label>
+					<input type="radio" name="category" id="categoryIDFWU" value="IDFWU">
+					<label for="categoryIDFWU">IDFWU ⛔️</label>
+				</div>
+				<button type="submit" id="generate-button">Generate ✓</button>
+			</form>
 		</div>
-		<button type="submit" id="generate-button">Generate</button>
-	</form>
-</div>
 
-<script>
-	if("<%=caption.lyric%>" != ""){
-		var category = "category" + "<%=caption.category%>";
-		console.log(category);
-		document.getElementById(category).checked = true;
-	} else {
-		document.getElementById("categoryAll").checked = true;
-	}
-</script>
+		<script>
+			if ("<%=caption.lyric%>" != "") {
+				var category = "category" + "<%=caption.category%>";
+				document.getElementById(category).checked = true;
+			} else {
+				document.getElementById("categoryAll").checked = true;
+			}
+		</script>
 
-<div>
-	<h3 id="caption-lyric"><%=caption.lyric%></h3>
-	<p id="caption-author"><%=caption.author%></p>
-	<p id="caption-song"><%=caption.song%></p>
-	<p id="caption-album"><%=caption.album%></p>
-	<p id="caption-category"><%=caption.category%></p>
-</div> 
+		<div id="lyric-box">
+			<!-- <div id="quote-box">
+				<img id="left-quote" src="images/left-quote.svg">
+				<img id="right-quote" src="images/right-quote.svg">
+			</div> -->
+			<h3 id="displayLyric">
+				<%=caption.lyric%>
+			</h3>
+			<h4 id="displaySong">
+				<%=caption.song%>
+			</h4>
+			<h4 id="author">
+				<%=caption.author%>
+			</h4>
+		</div>
+	</div>
 
-<div>
-	<h3>Have a lyric you want to submit?</h3>
-	<form action="/" method="POST">
+	<!-- <form action="/" method="POST">
 		<input type="text" name="lyric" placeholder="Lyric">
 		<input type="text" name="author" placeholder="Author">
 		<input type="text" name="song" placeholder="Song">
 		<input type="text" name="album" placeholder="Album">
 		<input type="text" name="category" placeholder="Category">
 		<input type="submit">
-	</form>
-</div>
+	</form> -->
 
-<%include partials/footer%>
+	<footer class="container">
+		<div id="footer-left">
+			<span style="padding-right: 16px;">© Karn Rahal 2018
+			</span>
+			<span>Made by
+				<a href="https://github.com/krahal" target="_blank">@krahal</a>
+			</span>
+		</div>
+		<div id="footer-right">
+			<span style="padding-right: 16px;">lyrics via
+				<a href="https://www.genius.com" target="_blank">genius</a>
+			</span> images via
+			<a href="https://www.giphy.com" target="_blank">giphy</a>
+		</div>
+	</footer>
+
+	<div id="bg">
+		<img id="myImg" src='https://media.giphy.com/media/l0MYz6wr2YZQ1fjuo/giphy.gif'>
+	</div>
+
+	<script onload="backgroundFunction('<%=caption.author%>')" src="js/landing.js"></script>
+
+	<%include partials/footer%>
