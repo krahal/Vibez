@@ -9,7 +9,7 @@ var Caption    	= require("./models/caption");
 var indexRoutes = require("./controllers/index");
 
 // mongoose.connect("mongodb://localhost/rap_captions");
-mongoose.connect("mongodb://karn:rahal604@ds119161.mlab.com:19161/rapcaptions");
+mongoose.connect(process.env.DATABASEURL);
 mongoose.Promise = global.Promise;
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
