@@ -1,7 +1,7 @@
 {
-  "name": "rapcaptions",
+  "name": "instarap",
   "version": "1.0.0",
-  "description": "Caption generator using hip-hop lyrics",
+  "description": "Caption generator using rap lyrics",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krahal/RapCaptions.git"
+    "url": "git+https://github.com/krahal/InstaRap.git"
   },
   "keywords": [
     "instagram",
@@ -22,9 +22,9 @@
   "author": "Karn Rahal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/krahal/RapCaptions/issues"
+    "url": "https://krahal.github.io"
   },
-  "homepage": "https://github.com/krahal/RapCaptions#readme",
+  "homepage": "https://http://instarap.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.5.7",
