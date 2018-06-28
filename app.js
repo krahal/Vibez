@@ -21,5 +21,5 @@ app.use("/", indexRoutes);
 // Start Express server
 var port = process.env.PORT || 3000;
 app.listen(port, process.env.IP, function(){
-	console.log("RapCaptions server started.");
+	console.log("Vibez server started.");
 });

@@ -1,7 +1,7 @@
 {
-  "name": "instarap",
+  "name": "vibez",
   "version": "1.0.0",
-  "description": "Caption generator using rap lyrics",
+  "description": "Caption generator using rap lyrics to match your vibe",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krahal/InstaRap.git"
+    "url": "git+https://github.com/krahal/Vibez.git"
   },
   "keywords": [
     "instagram",
@@ -17,14 +17,15 @@
     "generator",
     "hiphop",
     "rap",
-    "lyrics"
+    "lyrics",
+    "vibes"
   ],
   "author": "Karn Rahal",
   "license": "ISC",
   "bugs": {
     "url": "https://krahal.github.io"
   },
-  "homepage": "https://http://instarap.herokuapp.com/",
+  "homepage": "https://http://vibez.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.5.7",

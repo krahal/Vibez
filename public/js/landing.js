@@ -1,4 +1,3 @@
-// Random backround image function
 function backgroundFunction(author = 'none') {
 	console.log(author); 
 	var newBgImg;
@@ -18,8 +17,3 @@ function backgroundFunction(author = 'none') {
 
     document.getElementById("myImg").src = newBgImg;
 }
-
-// // on page load run the function background random
-// window.onload = function () {
-//     backgroundFunction();
-// };
